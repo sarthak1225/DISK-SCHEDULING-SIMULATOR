@@ -753,6 +753,66 @@
     opacity: 0;
     transition: all 0.4s cubic-bezier(.22,1,.36,1);
   }
+  /* ===== Developer Credits ===== */
+.dev-credits {
+  margin-top: 50px;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid var(--border-glow);
+  position: relative;
+}
+
+.dev-credits p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.dev-names {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dev-names span {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border-glow);
+  color: var(--accent-cyan);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow hover effect */
+.dev-names span:hover {
+  color: #fff;
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 20px rgba(168,85,247,0.4);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Animated gradient glow */
+.dev-names span::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple), var(--accent-pink));
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+}
+
+.dev-names span:hover::before {
+  opacity: 0.2;
+}
 
   .toast.show { transform: translateY(0); opacity: 1; }
   .toast.error { border-color: rgba(239,68,68,0.4); color: var(--accent-red); }
@@ -978,6 +1038,15 @@
       </div>
     </div>
   </div>
+  <!-- 👨‍💻 Developer Credits -->
+<div class="dev-credits">
+  <p>⚡ Developed by</p>
+  <div class="dev-names">
+    <span>Sarthak Verma</span>
+    <span>Dhruv</span>
+    <span>Deepak Kumar Ojha</span>
+  </div>
+</div>
 
 </div>
 
